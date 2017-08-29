@@ -7,6 +7,10 @@ account and store them locally in a maildir with the labels synchronized with a
 [notmuch](https://notmuchmail.org/) database. The changes to tags in the
 notmuch database may be pushed back remotely to your GMail account.
 
+Other mail pullers (offlineimap, isync/mbsync, etc.) are not needed and will not be used.
+
+If you already have a maildir downloaded, it will not be used.  You have to start from scratch (download from Gmail again) when using gmailieer.
+
 ## disclaimer
 
 Gmailieer will not and can not:
@@ -23,6 +27,12 @@ While Gmailieer has been used to successfully synchronize millions of messages a
 * `google_api_python_client` (sometimes `google-api-python-client`)
 * `oauth2client`
 * `notmuch` python bindings: latest from [git://notmuchmail.org/git/notmuch](https://git.notmuchmail.org/git/notmuch) or `>= 0.25` (when released)
+* `setuptools`
+
+In Debian 9 ("Stretch"), these can be obtained this way:
+```sh
+$ sudo apt-get -y install python3-tqdm python3-googleapi python3-oauth2client python3-notmuch python3-setuptools
+```
 
 ## installation
 
